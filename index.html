@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Gestión de Reclusos</title>
+  <style>
+    :root {
+      --bg: #1e1e2f;
+      --panel: #2a2a3d;
+      --accent: #ff6b6b;
+      --text: #f1f1f1;
+      --subtext: #a0a0a0;
+      --button-bg: #3a3a5c;
+      --button-hover: #ff6b6b;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--panel);
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    section {
+      background-color: var(--panel);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      background-color: var(--button-bg);
+      color: var(--text);
+    }
+
+    button:hover {
+      background-color: var(--button-hover);
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 0.5rem;
+      border-bottom: 1px solid #444;
+      text-align: left;
+    }
+
+    th {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <header>Sistema de Gestión de Reclusos</header>
+  <main>
+    <section>
+      <h2>Panel Principal</h2>
+      <button onclick="alert('Registrar Recluso')">📋 Registrar Recluso</button>
+      <button onclick="alert('Consultar Reclusos')">🔍 Consultar Reclusos</button>
+      <button onclick="alert('Gestión de Jueces y Delitos')">⚖️ Gestión de Jueces y Delitos</button>
+    </section>
+
+    <section>
+      <h2>Registro de Recluso</h2>
+      <label>Nombre del Recluso</label>
+      <input type="text" />
+
+      <label>Escolaridad</label>
+      <select>
+        <option>Primaria</option>
+        <option>Secundaria</option>
+        <option>Preparatoria</option>
+        <option>Universidad</option>
+      </select>
+
+      <label>Delito</label>
+      <input type="text" />
+
+      <label>Grupo del Delito</label>
+      <select>
+        <option>Contra la salud</option>
+        <option>Administrativos</option>
+        <option>Robo</option>
+        <option>Otros</option>
+      </select>
+
+      <label>Nombre del Juez</label>
+      <input type="text" />
+
+      <label>Años de experiencia del juez</label>
+      <input type="number" />
+
+      <label>Pena (días)</label>
+      <input type="number" />
+
+      <button>Guardar</button>
+    </section>
+
+    <section>
+      <h2>Consulta de Reclusos</h2>
+      <input type="search" placeholder="Buscar por nombre o delito" />
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Delito</th>
+            <th>Grupo</th>
+            <th>Juez</th>
+            <th>Pena (días)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Juan Pérez</td>
+            <td>Robo</td>
+            <td>Administrativos</td>
+            <td>Lic. Morales</td>
+            <td>365</td>
+          </tr>
+          <tr>
+            <td>María Gómez</td>
+            <td>Tráfico</td>
+            <td>Contra la salud</td>
+            <td>Lic. Herrera</td>
+            <td>1095</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
